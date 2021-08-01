@@ -8,6 +8,7 @@ const HeaderCartButton = (props) => {
   const [btnIsHighlighted, setBtnIsHighlighted] = useState(false);
   const cartCtx = useContext(CartContext);
 
+  //object destructuring so useEffect is only triggered when items change
   const { items } = cartCtx;
 
   const numberOfCartItems = items.reduce((curNumber, item) => {
